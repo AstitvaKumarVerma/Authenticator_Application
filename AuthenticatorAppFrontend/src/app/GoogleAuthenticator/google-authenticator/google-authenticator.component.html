@@ -1,0 +1,98 @@
+<app-nav-bar></app-nav-bar>
+
+
+<div *ngIf="isShow" class="auth-message">
+  Your Two Factor Authentication is Activated.
+</div>
+
+<div *ngIf="!isShow">
+  <div class="signin-bg overflowhide">
+    <div class="container center_tb">
+      <div class="col-sm-12 col-md-12 col-lg-10 col-xl-8 center-div">
+        <div class="login-outer">
+          <h2> Two Factor Authentication through Google Authenticator Application</h2>
+          <div class="row">
+            <div class="col-lg-6 what-healthtree">
+              <div class="">
+                <span id="homePageContent">
+                  <p *ngIf="!userdata || userdata.isQRScanned">
+                    Manually fill the Authenticator code from google authenticator
+                    application.
+                  </p>
+                  <p *ngIf="userdata && !userdata.isQRScanned">
+                    Manually fill the Authenticator code or scan the Authenticator
+                    QRCode in google authenticator application to get
+                    Authentication pin.
+                  </p>
+                </span>
+                <br />
+                <p
+                  class="what-healthtree"
+                  *ngIf="userdata && !userdata.isQRScanned"
+                >
+                  Authenticator Code:
+                  <strong>{{ qrCode }}</strong>
+                </p>
+              </div>
+  
+              <div class="" style="display: flex;">
+                <div class="col-lg-4" *ngIf="userdata && !userdata.isQRScanned">
+                  <div class="text-center what-healthtree">
+                    <p id="homePageContent">Authenticator QRCode:</p>
+                  </div>
+                  <div class="col-lg-12 text-center what-healthtree">
+                    <div class="form-group">
+                      <img [src]="qrCodeSrc" />
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="col-lg-4 login_box">
+                  <div class="form-container what-healthtree">
+                    <form [formGroup]="authForm">
+                      <div class="row">
+                          <mat-form-field class="example-full-width">
+                              <mat-label>Verification Code</mat-label>
+                              <input type="text" 
+                                  matInput 
+                                  formControlName="Code" 
+                                  placeholder="Enter Verification Code"
+                                  matTooltip="** Please enter pin generated on google authenticator application."
+                                  maxlength="6"
+                                  #codeInput
+                              >
+                          </mat-form-field>
+                      </div>
+                      <div class="row button">
+                        <div class="col-md-12 text-right">
+                          <button
+                            mat-raised-button
+                            class="success"
+                            (click)="ValidateAuthCode()"
+                          >
+                            Validate
+                          </button>
+                          &nbsp;
+                          <button mat-raised-button class="reset" (click)="reset()">
+                            Reset
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+  
+                <div class="col-lg-4" style="margin: 4% 0 0 4%;">
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNodHrbo4q0OpaiKFxammhdcEpNdpyCfh6aw&s" height="200" width="420" />
+                </div>
+  
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

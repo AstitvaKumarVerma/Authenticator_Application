@@ -1,0 +1,24 @@
+<app-nav-bar></app-nav-bar>
+
+<div *ngIf="isShow" class="auth-message">
+  Your Two Factor Authentication is Activated.
+</div>
+<div *ngIf="!isShow" class="otp-verification-container">
+  
+  <button class="close-btn" routerLink="/home">&#x2716;</button> 
+  <h2>OTP Verification</h2>
+  <form [formGroup]="otpForm" (ngSubmit)="verifyOtp()">
+    <div class="form-group">
+      <label for="userEmail">Email</label>
+      <input type="text" id="userEmail" value="{{ UserEmail }}" name="userEmail" class="form-control with-margin" disabled>
+    </div>
+    <div class="form-group">
+      <label for="otp">Enter OTP</label>
+      <input type="text" formControlName="otp" id="otp" name="otp" class="form-control with-margin" maxlength="6" placeholder="Enter 6-digit OTP" required>
+    </div>
+    <div class="button-container">
+      <button type="button" class="btn btn-secondary" (click)="sendOtp()">Send OTP Again</button>
+      <button type="submit" class="btn btn-primary">Verify OTP</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,147 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Light gray background */
+  }
+
+  .auth-message {
+    margin-top: 10px;
+    border: 2px solid #333; /* Solid border with color #333 (dark gray) */
+    border-radius: 5px; /* Rounded corners */
+    padding: 15px; /* Padding for spacing */
+    background-color: #f5f5f5; /* Light gray background */
+    color: #000; /* Text color black */
+    font-family: Arial, sans-serif; /* Base font family */
+    font-size: 16px; /* Font size */
+  }
+
+  .signin-bg.overflowhide {
+    /* Existing styles */
+    margin: 0 auto; /* Center horizontally */
+    margin-top: -50px; /* Adjust vertical position as needed */
+}
+  
+  .container {
+    max-width: 1024px;
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px;
+  }
+  
+  .center_tb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Set minimum height for full viewport */
+  }
+  
+  /* Login Section Styles */
+  .login-outer {
+    background-color: #f0f0f0; /* Start color */
+    background-image: linear-gradient(to top, #f0f0f0 0%, #e0e0e0 100%); /* Gradient definition */
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+  }
+  
+  .logo {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .logo img {
+    width: 220px; /* Adjust logo width if needed */
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  
+  .col-lg-6,
+  .col-md-6 {
+    flex: 0 0 50%;
+    padding: 15px;
+  }
+  
+  .what-healthtree {
+    color: #333; /* Text color */
+  }
+  
+  .what-healthtree p {
+    margin-bottom: 10px;
+  }
+  
+  .what-healthtree strong {
+    font-weight: bold;
+  }
+  
+  .login_box {
+    margin-left: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .form-container {
+    width: 100%;
+  }
+  
+  /* Form Styles */
+  .mat-form-field {
+    width: 100%;
+  }
+  
+  .mat-form-field input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .mat-form-field .mat-form-label {
+    color: #333; /* Label color */
+  }
+  
+  .button {
+    margin-top: 20px;
+  }
+  
+  .button button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .button .success {
+    background-color: #4CAF50; /* Green button */
+    color: white;
+  }
+  
+  .button .reset {
+    background-color: #dfdddd; 
+    color: #333;
+  }
+  
+  .p_info {
+    text-align: center;
+    margin-top: 20px;
+    color: #666; /* Text color for info message */
+  }
+  
+  /* Responsive Styles (Optional) */
+  @media (max-width: 768px) {
+    .col-lg-6,
+    .col-md-6 {
+      flex: 0 0 100%;
+    }
+  }
+  

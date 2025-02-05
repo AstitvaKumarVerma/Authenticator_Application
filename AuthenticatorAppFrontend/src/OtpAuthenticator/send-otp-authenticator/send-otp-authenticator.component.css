@@ -1,0 +1,105 @@
+.auth-message {
+  margin-top: 10px;
+  border: 2px solid #333; /* Solid border with color #333 (dark gray) */
+  border-radius: 5px; /* Rounded corners */
+  padding: 15px; /* Padding for spacing */
+  background-color: #f5f5f5; /* Light gray background */
+  color: #000; /* Text color black */
+  font-family: Arial, sans-serif; /* Base font family */
+  font-size: 16px; /* Font size */
+}
+
+.otp-verification-container {
+  max-width: 400px;
+  margin: 5% 0 0 30%;
+  /* margin: auto; */
+  padding: 80px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f5f5f5; /* Light background */
+  font-family: Arial, sans-serif; /* Basic font stack */
+  position: relative; /* Add relative positioning for button placement */
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  padding: 5px;
+  border:none;
+  background-color: transparent; /* Transparent background */
+  cursor: pointer;
+  font-size: 1.2rem; /* Adjust size as needed */
+  color: #333; /* Darker text color */
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #999;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 2rem; /* Spacious heading */
+  font-size: 1.5rem; /* Larger heading size */
+}
+
+.form-group {
+  margin-bottom: 1.5rem; /* Consistent spacing */
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.with-margin {
+  margin-right: -20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  margin: 5px; /* Consistent margin */
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff; /* White text */
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-secondary {
+  background-color: #ddd;
+  color: #333; /* Darker text */
+}
+
+.btn-secondary:hover {
+  background-color: #ccc;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between; /* Space buttons evenly */
+}
+
+.form-control[disabled] {
+  background-color: #eee;
+  opacity: 0.8; /* Disabled email field */
+  cursor: default; /* Remove pointer for disabled field */
+}
